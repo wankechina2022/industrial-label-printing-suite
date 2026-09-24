@@ -70,7 +70,7 @@ Every printing behavior is configurable per device — because no two production
 - Command mode with command-file logging for troubleshooting
 
 ### Embedded Web Console
-The application hosts its own web server — production staff can monitor printing status from a browser on the shop floor without installing anything on their machines.
+The application hosts its own web server — production staff can monitor printing status from a browser on the shop floor without installing anything on their PCs.
 
 ---
 
