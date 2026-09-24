@@ -1,0 +1,34 @@
+# Build output
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+*.dll
+*.pdb
+*.exe
+*.cache
+*.log
+
+# Visual Studio / Rider
+.vs/
+.idea/
+*.user
+*.suo
+*.userprefs
+
+# Temporary
+*.tmp
+*.bak
+*.orig
+~$*
+
+# NuGet
+packages/
+*.nupkg
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
