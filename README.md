@@ -69,20 +69,17 @@ Every printing behavior is configurable per device — because no two production
 - Read/write timeouts, heartbeat interval, and **write-fail retry with configurable retry count and interval**
 - Command mode with command-file logging for troubleshooting
 
-### Embedded Web Console
-The application hosts its own web server — production staff can monitor printing status from a browser on the shop floor without installing anything on their PCs.
-
 ---
 
 ## Architecture
 
 ```
-┌──────────────────┐        ┌──────────────────┐
-│   MES / ERP /    │        │   Web Browser    │
-│  External System │        │  (Shop-floor UI) │
-└────────┬─────────┘        └────────┬─────────┘
-         │ TCP / Web API             │ HTTP
-         ▼                           ▼
+┌──────────────────┐
+│   MES / ERP /    │
+│  External System │
+└────────┬─────────┘
+         │ TCP / Web API
+         ▼
 ┌────────────────────────────────────────────────┐
 │            Printing Core Service               │
 │  ┌──────────────┐   ┌────────────────────┐    │
@@ -112,7 +109,6 @@ The application hosts its own web server — production staff can monitor printi
 | Template Rendering | Command generation for ZPL & TSPL printers |
 | Integration | TCP Socket Server, HTTP Web API |
 | Variable I/O | JSON, XML, TXT |
-| Web Console | Embedded web server |
 
 ---
 
@@ -134,7 +130,6 @@ The application hosts its own web server — production staff can monitor printi
 - Multi-station labeling with centralized template management
 - Barcode/QR code printing for product traceability
 - Retrofit labeling control for mixed-brand printer fleets
-- Shop-floor print monitoring without operator workstation installs
 
 ---
 
