@@ -17,7 +17,7 @@ This application handles that whole chain: **data in → variable mapping → te
 ## Capabilities
 
 ### Multi-Device Management
-Register and manage an unlimited number of printers from one console. Each device is defined by brand, model, type, and physical location (factory / line / station), with independent connections, per-device configuration, and live status monitoring.
+Register and manage multiple printers from one console. Each device is defined by brand, model, type, and physical location (factory / line / station), with independent connections, per-device configuration, and live status monitoring.
 
 ![Device Management](equipments.png)
 
@@ -42,9 +42,9 @@ Print data is decoupled from print templates. Variables flow in from external sy
 ![Variable Management](var.png)
 
 - External and base variable sets, each independently enabled/disabled
-- Template syntax: `%[Weight]%`, `%[MoreInfo]%[NowDate]%` — external values bound directly into the layout
+- Template syntax: `%[Weight]%`, `%[nowdate]%` — external values bound directly into the layout
 - Import/export variable definitions as **JSON / TXT / XML**
-- Bulk operations and toggle-all for large variable libraries (hundreds of variables supported)
+- Bulk operations and toggle-all for large variable libraries
 
 ### Interface & Integration
 Structured interfaces for upstream systems, not a black box.
@@ -53,7 +53,7 @@ Structured interfaces for upstream systems, not a black box.
 
 - **TCP Server** — external systems push label data in; config mode, test mode, and remote configuration
 - **Web API** — HTTP-based integration for systems that prefer request/response over sockets
-- Multi-driver architecture: printer drivers are loaded and discovered at runtime
+- Multi-driver architecture — each printer family is handled by its own driver
 - **Easily extensible** — adding a new printer brand or model means implementing one driver
 - Built-in interface documentation for integrators
 
